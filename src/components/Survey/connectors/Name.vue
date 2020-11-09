@@ -15,6 +15,7 @@
     },
     methods: {
       submit () {
+        this.$store.dispatch('survey/getName', this.name)
         this.$router.push('/goals')
       }
     }
