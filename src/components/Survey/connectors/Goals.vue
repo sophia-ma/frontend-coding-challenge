@@ -47,7 +47,7 @@
       }
     },
     computed: {
-      storeName() {
+      storedName() {
         return this.$store.getters['survey/name'];
       }
     }
@@ -58,7 +58,7 @@
   <div class="grid-x grid-x-margin">
     <div class="cell small-12 medium-6 medium-offset-3">
       <div class="survey-questions__goals align-center">
-        <h1>Nice to meet you {{ storeName }}. What would you like to focus on?</h1>
+        <h1>Nice to meet you {{ storedName }}. What would you like to focus on?</h1>
         <p class="body--large question-description">Choose up to four</p>
         <div class="spacer sp__top--sm"></div>
         <check-button v-for="(goal, key) in goals" :key="key" :text="goal.name"></check-button>
