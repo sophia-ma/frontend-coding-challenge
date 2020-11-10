@@ -1,5 +1,6 @@
 const state = () => ({
-  name: ''
+  name: '',
+  selectedGoals: ''
 })
 
 export default state

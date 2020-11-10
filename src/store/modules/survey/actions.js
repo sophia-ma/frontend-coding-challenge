@@ -9,5 +9,8 @@ export default {
   },
   getName ({ commit }, name) {
     commit('updateName', { name })
+  },
+  getSelectedGoals ({ commit }, goal) {
+    commit('updateSelectedGoals', { goal })
   }
 }

@@ -13,13 +13,35 @@
       selected: {
         type: Boolean,
         default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      }
+    },
+    data () {
+      return {
+        selectedValue: this.value,
+      }
+    },
+    methods: {
+      updateValue() {
+        if (this.reachedMaxSelection) return;
+
+        this.$emit('click', this.selectedValue);
+        this.$store.dispatch('survey/getSelectedGoals', this.selectedValue)
+      },
+    },
+    computed: {
+      reachedMaxSelection() {
+        return !this.selected && this.disabled;
       }
     }
   }
 </script>
 
 <template>
-  <div class="check-button" :class="{ 'check-button--selected': selected }" tabindex="0">
+  <div class="check-button" :class="{ 'check-button--selected': selected, 'check-button--disabled': reachedMaxSelection  }" @click="updateValue" tabindex="0">
     <p class="check-button__text body--large">{{ text }}</p>
   </div>
 </template>
