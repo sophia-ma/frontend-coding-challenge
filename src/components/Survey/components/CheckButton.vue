@@ -21,20 +21,20 @@
     },
     data () {
       return {
-        selectedValue: this.value,
+        selectedValue: this.value
       }
     },
     methods: {
-      updateValue() {
-        if (this.reachedMaxSelection) return;
+      updateValue () {
+        if (this.reachedMaxSelection) return
 
-        this.$emit('click', this.selectedValue);
+        this.$emit('click', this.selectedValue)
         this.$store.dispatch('survey/getSelectedGoals', this.selectedValue)
-      },
+      }
     },
     computed: {
-      reachedMaxSelection() {
-        return !this.selected && this.disabled;
+      reachedMaxSelection () {
+        return !this.selected && this.disabled
       }
     }
   }
