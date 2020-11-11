@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="cell auto align-right">
-            <thv-button element="button" size="large" @click="submit">Next</thv-button>
+            <thv-button element="button" size="large" :disabled="!storedGoals" @click="submit">Next</thv-button>
           </div>
         </div>
       </div>
