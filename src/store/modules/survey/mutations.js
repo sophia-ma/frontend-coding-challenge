@@ -20,5 +20,8 @@ export default {
   },
   updateDiet (state, { diet }) {
     state.diet = diet
+  },
+  updateDob (state, { dob }) {
+    state.dob = dob
   }
 }

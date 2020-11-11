@@ -78,7 +78,7 @@
   }
 </script>
 
-<template>  
+<template>
   <div class="input input__dob" :class="{ 'error': ageError }">
     <p class="body--small input__description" v-if="description" :class="{ 'error': ageError }">{{ description }}</p>
     <div class="input__group">

@@ -7,5 +7,8 @@ export default {
   },
   diet (state) {
     return state.diet
+  },
+  dob (state) {
+    return state.dob
   }
 }
