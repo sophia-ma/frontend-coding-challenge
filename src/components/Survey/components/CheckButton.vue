@@ -28,8 +28,7 @@
       updateValue () {
         if (this.reachedMaxSelection) return
 
-        this.$emit('click', this.selectedValue)
-        this.$store.dispatch('survey/getSelectedGoals', this.selectedValue)
+        this.$emit('valueSelected', this.selectedValue)
       }
     },
     computed: {

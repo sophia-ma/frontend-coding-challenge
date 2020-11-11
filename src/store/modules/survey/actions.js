@@ -12,5 +12,8 @@ export default {
   },
   getSelectedGoals ({ commit }, goal) {
     commit('updateSelectedGoals', { goal })
+  },
+  getSelectedDiet ({ commit }, diet) {
+    commit('updateSelectedDiet', { diet })
   }
 }

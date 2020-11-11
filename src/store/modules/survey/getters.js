@@ -4,5 +4,8 @@ export default {
   },
   selectedGoals (state) {
     return state.selectedGoals
+  },
+  selectedDiet (state) {
+    return state.selectedDiet
   }
 }

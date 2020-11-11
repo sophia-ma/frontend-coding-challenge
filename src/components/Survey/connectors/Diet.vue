@@ -41,6 +41,14 @@
       },
       back () {
         this.$router.push('/goals')
+      },
+      getSelectedDiet (value) {
+        this.$store.dispatch('survey/getSelectedDiet', value)
+      }
+    },
+    computed: {
+      storedDiet() {
+        return this.$store.getters['survey/selectedDiet']
       }
     }
   }
@@ -52,7 +60,14 @@
       <div class="survey-questions__diet align-center">
         <h1>Do you follow a particular diet?</h1>
         <div class="spacer sp__top--sm"></div>
-        <check-button v-for="(diet, key) in diets" :key="key" :text="diet.name"></check-button>
+        <check-button
+          v-for="(diet, key) in diets"
+          :key="key"
+          :text="diet.name"
+          :value="key"
+          :selected="storedDiet === key"
+          v-on:valueSelected="getSelectedDiet"
+        ></check-button>
         <div class="grid-x button-container">
           <div class="cell auto">
             <div class="back-button-container">
@@ -60,7 +75,7 @@
             </div>
           </div>
           <div class="cell auto align-right">
-            <thv-button element="button" size="large" @click="submit">Next</thv-button>
+            <thv-button element="button" size="large" :disabled="!storedDiet" @click="submit">Next</thv-button>
           </div>
         </div>
       </div>

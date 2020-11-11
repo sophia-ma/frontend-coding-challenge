@@ -17,5 +17,8 @@ export default {
       state.selectedGoals = goal
     }
     state.selectedGoals = state.selectedGoals.replace(/,+/g, ',').replace(/^,|,$/g, '')
+  },
+  updateSelectedDiet (state, { diet }) {
+    state.selectedDiet = diet
   }
 }
