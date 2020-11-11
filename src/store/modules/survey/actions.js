@@ -10,10 +10,10 @@ export default {
   getName ({ commit }, name) {
     commit('updateName', { name })
   },
-  getSelectedGoals ({ commit }, goal) {
-    commit('updateSelectedGoals', { goal })
+  getGoals ({ commit }, goal) {
+    commit('updateGoals', { goal })
   },
-  getSelectedDiet ({ commit }, diet) {
-    commit('updateSelectedDiet', { diet })
+  getDiet ({ commit }, diet) {
+    commit('updateDiet', { diet })
   }
 }

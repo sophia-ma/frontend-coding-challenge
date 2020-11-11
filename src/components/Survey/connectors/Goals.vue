@@ -47,18 +47,18 @@
         this.$router.push('/name')
       },
       getSelectedGoal (value) {
-        this.$store.dispatch('survey/getSelectedGoals', value)
+        this.$store.dispatch('survey/getGoals', value)
       }
     },
     computed: {
-      storedName() {
+      storedName () {
         return this.$store.getters['survey/name']
       },
-      storedGoals() {
-        return this.$store.getters['survey/selectedGoals']
+      storedGoals () {
+        return this.$store.getters['survey/goals']
       },
-      disabled() {
-        return this.storedGoals.split(",").length === this.maxSelection
+      disabled () {
+        return this.storedGoals.split(',').length === this.maxSelection
       }
     }
   }

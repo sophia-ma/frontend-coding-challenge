@@ -43,12 +43,12 @@
         this.$router.push('/goals')
       },
       getSelectedDiet (value) {
-        this.$store.dispatch('survey/getSelectedDiet', value)
+        this.$store.dispatch('survey/getDiet', value)
       }
     },
     computed: {
-      storedDiet() {
-        return this.$store.getters['survey/selectedDiet']
+      storedDiet () {
+        return this.$store.getters['survey/diet']
       }
     }
   }

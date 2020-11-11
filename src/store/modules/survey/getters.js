@@ -2,10 +2,10 @@ export default {
   name (state) {
     return state.name
   },
-  selectedGoals (state) {
-    return state.selectedGoals
+  goals (state) {
+    return state.goals
   },
-  selectedDiet (state) {
-    return state.selectedDiet
+  diet (state) {
+    return state.diet
   }
 }

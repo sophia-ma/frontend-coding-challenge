@@ -2,23 +2,23 @@ export default {
   updateName (state, { name }) {
     state.name = name
   },
-  updateSelectedGoals (state, { goal }) {
-    if (state.selectedGoals) {
-      if (state.selectedGoals.includes(goal)) {
-        if (state.selectedGoals.includes(',')) {
-          state.selectedGoals = state.selectedGoals.replace(`${goal}`, '')
+  updateGoals (state, { goal }) {
+    if (state.goals) {
+      if (state.goals.includes(goal)) {
+        if (state.goals.includes(',')) {
+          state.goals = state.goals.replace(`${goal}`, '')
         } else {
-          state.selectedGoals = ''
+          state.goals = ''
         }
       } else {
-        state.selectedGoals = `${state.selectedGoals},${goal}`
+        state.goals = `${state.goals},${goal}`
       }
     } else {
-      state.selectedGoals = goal
+      state.goals = goal
     }
-    state.selectedGoals = state.selectedGoals.replace(/,+/g, ',').replace(/^,|,$/g, '')
+    state.goals = state.goals.replace(/,+/g, ',').replace(/^,|,$/g, '')
   },
-  updateSelectedDiet (state, { diet }) {
-    state.selectedDiet = diet
+  updateDiet (state, { diet }) {
+    state.diet = diet
   }
 }
