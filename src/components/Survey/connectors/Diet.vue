@@ -51,7 +51,7 @@
         return this.$store.getters['survey/diet']
       }
     },
-    beforeMount() {
+    beforeMount () {
       this.$store.dispatch('survey/getCurrentStep')
     }
   }
@@ -67,8 +67,8 @@
           v-for="(diet, key) in diets"
           :key="key"
           :text="diet.name"
-          :value="key"
-          :selected="storedDiet === key"
+          :value="diet.name"
+          :selected="storedDiet === diet.name"
           v-on:valueSelected="getSelectedDiet"
         ></check-button>
         <div class="grid-x button-container">

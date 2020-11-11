@@ -61,7 +61,7 @@
         return this.storedGoals.split(',').length === this.maxSelection
       }
     },
-    beforeMount() {
+    beforeMount () {
       this.$store.dispatch('survey/getCurrentStep')
     }
   }
@@ -78,8 +78,8 @@
           v-for="(goal, key) in goals"
           :key="key"
           :text="goal.name"
-          :value="key"
-          :selected="storedGoals.includes(key)"
+          :value="goal.name"
+          :selected="storedGoals.includes(goal.name)"
           :disabled="disabled"
           v-on:valueSelected="getSelectedGoal"
         ></check-button>

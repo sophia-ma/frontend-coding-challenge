@@ -14,7 +14,7 @@
     computed: {
       currentStep () {
         return this.$store.getters['survey/currentStep']
-      },
+      }
     }
   }
 </script>

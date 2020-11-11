@@ -34,7 +34,14 @@
 
         this.$validator.validate().then(result => {
           if (result && !this.feedback) {
-            this.$router.push('/success')
+            this.$store
+              .dispatch('survey/sendToApi')
+              .then(result => {
+                if (result.status === 201) {
+                  this.$router.push('/success')
+                }
+              })
+              .catch(error => console.log(error.response.data.error))
           }
         })
       },
@@ -42,7 +49,7 @@
         this.$router.push('/diet')
       }
     },
-    beforeMount() {
+    beforeMount () {
       this.$store.dispatch('survey/getCurrentStep')
     }
   }

@@ -19,7 +19,7 @@
         this.$router.push('/goals')
       }
     },
-    beforeMount() {
+    beforeMount () {
       this.$store.dispatch('survey/getCurrentStep')
     }
   }
