@@ -15,7 +15,7 @@
   }
 </script>
 
-<template>  
+<template>
   <header class="header">
     <div class="header__container"><a class="header__logo header__logo--logomark" href="/"><img :src="logoSrc"/></a>
       <survey-progress></survey-progress>

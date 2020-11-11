@@ -23,5 +23,8 @@ export default {
   },
   updateDob (state, { dob }) {
     state.dob = dob
+  },
+  updateCurrentStep (state) {
+    state.currentStep++
   }
 }

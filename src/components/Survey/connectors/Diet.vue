@@ -50,6 +50,9 @@
       storedDiet () {
         return this.$store.getters['survey/diet']
       }
+    },
+    beforeMount() {
+      this.$store.dispatch('survey/getCurrentStep')
     }
   }
 </script>

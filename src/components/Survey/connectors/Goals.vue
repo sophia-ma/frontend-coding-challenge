@@ -60,6 +60,9 @@
       disabled () {
         return this.storedGoals.split(',').length === this.maxSelection
       }
+    },
+    beforeMount() {
+      this.$store.dispatch('survey/getCurrentStep')
     }
   }
 </script>

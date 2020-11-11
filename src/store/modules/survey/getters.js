@@ -10,5 +10,8 @@ export default {
   },
   dob (state) {
     return state.dob
+  },
+  currentStep (state) {
+    return state.currentStep
   }
 }

@@ -41,6 +41,9 @@
       back () {
         this.$router.push('/diet')
       }
+    },
+    beforeMount() {
+      this.$store.dispatch('survey/getCurrentStep')
     }
   }
 </script>

@@ -18,6 +18,9 @@
         this.$store.dispatch('survey/getName', this.name)
         this.$router.push('/goals')
       }
+    },
+    beforeMount() {
+      this.$store.dispatch('survey/getCurrentStep')
     }
   }
 </script>

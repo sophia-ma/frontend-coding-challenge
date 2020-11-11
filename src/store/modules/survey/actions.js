@@ -18,5 +18,8 @@ export default {
   },
   getDob ({ commit }, dob) {
     commit('updateDob', { dob })
+  },
+  getCurrentStep ({ commit }) {
+    commit('updateCurrentStep')
   }
 }

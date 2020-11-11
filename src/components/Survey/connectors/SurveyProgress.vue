@@ -5,15 +5,25 @@
     name: 'SurveyProgress',
     components: {
       ProgressBar
+    },
+    data () {
+      return {
+        stages: ['Name', 'Goals', 'Diet', 'Dob']
+      }
+    },
+    computed: {
+      currentStep () {
+        return this.$store.getters['survey/currentStep']
+      },
     }
   }
 </script>
 
-<template>  
+<template>
   <div class="progress-bar-container">
   <!-- SUGGESTION: progress-bar needs a currentStep and a stages array. These need to be passed in here	 -->
   <!-- SUGGESTION: un-comment the below when your ready to pass these in	 -->
-  <!-- <progress-bar :currentStep='currentStep', :totalSteps='stages.length'></progress-bar> -->
+  <progress-bar :currentStep='currentStep' :totalSteps='stages.length'></progress-bar>
   </div>
 </template>
 
@@ -24,5 +34,4 @@
     width: 80px;
     align-items: center;
   }
-
 </style>
