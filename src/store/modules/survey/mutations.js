@@ -1,3 +1,5 @@
+import { initialState } from './state'
+
 export default {
   updateName (state, { name }) {
     state.name = name
@@ -26,5 +28,12 @@ export default {
   },
   updateCurrentStep (state) {
     state.currentStep++
+  },
+  resetState (state) {
+    const initial = initialState()
+
+    Object.keys(initial).forEach(key => {
+      state[key] = initial[key]
+    })
   }
 }

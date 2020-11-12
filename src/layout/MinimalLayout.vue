@@ -10,7 +10,7 @@
   }
 </script>
 
-<template>  
+<template>
   <div class="wrapper wrapper--minimal">
     <page-header :funnelName="$route.meta.funnelName"></page-header>
     <div class="content">

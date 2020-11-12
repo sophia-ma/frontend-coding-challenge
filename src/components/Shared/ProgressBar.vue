@@ -30,7 +30,7 @@
   }
 </script>
 
-<template>  
+<template>
   <div class="progress-bar progress-bar--segmented grid-x" v-if="segmented">
     <div class="cell auto segment" v-for="n in currentStep" :style="segmentStyle"></div>
     <div class="cell auto segment" v-for="n in (totalSteps - currentStep)"></div>
